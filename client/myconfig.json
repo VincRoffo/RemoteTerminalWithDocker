@@ -1,0 +1,20 @@
+{
+    "images": [
+        {
+            "name":"nmap",
+            "image":"uzyexe/nmap",
+            "example": "nmap -v HOST"          
+	},
+        {
+            "name":"nc",
+            "image":"subfuzion/netcat",
+            "example": "nc -z -v HOST PORT(s)"  
+        },
+	{
+            "name":"nikto",
+            "image":"securecodebox/nikto",
+            "example": "nikto -p PORT(s) -o HOST"  
+        }
+    ]
+}
+                
