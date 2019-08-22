@@ -4,15 +4,22 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { NgTerminalModule } from 'ng-terminal';
+import { TerminalComponent } from './terminal/terminal.component';
+
+import { WebsocketService } from './service/websocket.service';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TerminalComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgTerminalModule
   ],
-  providers: [],
+  providers: [WebsocketService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
