@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "back-end web application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VincRoffo/RemoteTerminalWithDocker.git"
+  },
+  "author": "Vincenzo Roffo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VincRoffo/RemoteTerminalWithDocker/issues"
+  },
+  "homepage": "https://github.com/VincRoffo/RemoteTerminalWithDocker#readme",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "express": "^4.17.1",
+    "http": "0.0.0",
+    "path": "^0.12.7",
+    "socket.io": "^2.2.0"
+  }
+}
