@@ -5,7 +5,6 @@ var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var spawn = require('child_process').spawn;
 var myProcess = null;
-var port = 3000;
 var running=false;
 
 app.use(express.static(path.join(__dirname, "public")));
