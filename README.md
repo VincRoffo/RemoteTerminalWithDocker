@@ -1,46 +1,41 @@
 # RemoteTerminalWithDocker
 
-RemoteTerminalWithDocker è una web application realizzata nell'ambito dei corsi di NetworkSecurity-ApllicazioniTelematiche 
-a.a.2018-2019 svoltisi presso l'università Federico II di Napoli. 
+RemoteTerminalWithDocker is a web application built as the pratice-part of two exams which took place at Federico II university in Napoli (IT). 
 
-L'idea alla base di questo progetto è stata quella di sviluppare due sotto-sistemi:
-- un client Angular, che offre un'interfaccia "linux terminal style" che permette tramite comandi linux l'esecuzione di specifici
-  tool di hacking;
-- un server sviluppato tramite il noto framework web Express basato sul runtime di JavaScript Node.js, che lancia container docker
-  in modalità "--rm" per l'esecuzione dei suddetti comandi.
+The idea behind this application was to develop two sub-systems:
+- an Angular client, which offers a "linux terminal"-style interface used by the user to run some specific hacking commands
+- a server, developed with the framework web Express, which throws docker containers in "--rm" mode to execute the commands when trasmitted by the client
   
-Mediante l'utilizzo delle Socket, l'output restituito dall'esecuzione dei singoli comandi è mostrato in tempo reale
-al client, il quale può anche decidere di abortire l'esecuzione di un comando in qualsiasi momento. 
+Through the Socket-technology, the output returned by the execution of each single command is showed in real-time to the client who can decide at anytime to abort it (and submit a new one without waiting the previous one to end). 
 
-Per semplicità di utlizzo, e per conoscere il preset di tool supportati dall'applicazione, sono stati implementati alcuni comandi
-che è possibile scoprire digitando "help" sul terminale client.
+In order to be user-friendly, and to let the user know which are the tools supported by the application, some utility commands are available. Insert "help" to discover them.
 
 
 ## Prerequisites
 
-Gli unici prerequisiti richiesti per il funzionamento dell’applicazione sono:
-- il docker engine: necessario lato server per l'esecuzione delle docker-images relative ai tool di hacking;
-- un browser web qualsiasi: necessario lato client per accedere alle funzionalità dell'applicazione.
+The only necessary prerequisites to run the application:
+- the docker engine: used server-side to throw the containers
+- a web browser web (any): used client-side to access the functionalities of the application
 
 ## Getting Started
 
-Per testare il progetto:
-1) clonare la repo: git clone https:
+To test the project:
+1) clone the git repository: git clone https:
 ```
 //github.com/VincRoffo/RemoteTerminalWithDocker.git
 ```
-2) installare le dipendenze del back-end ed avviarlo:
+2) install the back-end dependencies and run it:
 ```
 cd server
-sudo npm install
-sudo node server.js
+npm install
+node server.js
 ```
-3) installare le dipendenze del front-end ed avviarlo:
+3) install the front-end dependencies and run it:
 ```
 cd client/live-terminal
-sudo npm install
+npm install
 ng -o serve
 ```
-Verrà così aperto il browser di default all'indirizzo "localhost:4200/".
+The default browser will automatically open at "localhost:4200/".
 
 
